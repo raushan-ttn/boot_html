@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Exercise 3 HTML</title>
+  <meta name="description" content="Exercise 3 HTML" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .blog-header {
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .blog-content {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .single-post {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+    .single-post-content {
+      padding: 0 10px 0 0;
+    }
+    .sidebar-posts {
+      max-width: 400px;
+    }
+    .single-post-meta {
+      padding-bottom: 10px;
+    }
+    .single-post-meta .fa.fa-arrow-right {
+      position: relative;
+      left: 130px;
+    }
+    .featured-image {
+      width: 100%;
+    }
+    .featured-post {
+      border: 1px solid #ddd;
+    }
+    .single-post:nth-child(3) {
+      margin-bottom: 0px;
+    }
+    .read-more {
+      text-decoration: none;
+      color: red;
+    }
+    .post-meta,
+    .post-content {
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .single-post-meta .fa.fa-arrow-right {
+        left: 0;
+      }
+      .sidebar-posts {
+        width: 100%;
+        max-width: 560px;
+      }
+      .blog-content {
+        margin: 20px;
+      }
+    }
+    .blog-header {
+      padding: 20px;
+    }
+    hr {
+      border-color: #fdfdfd;
+    }
+    .post-meta .fa {
+      padding: 5px;
+    }
+    .post-meta span {
+      margin: 0px 10px;
+    }
+  </style>
+  <body>
+    <section class="blog-header">
+      <div class="container">
+        <h1>Blog Title</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus
+          nulla ut commodo sagittis
+        </p>
+      </div>
+    </section>
+    <section class="blog-content">
+      <div class="featured-post">
+        <img
+          src="assets/image/mainblog.png"
+          alt="Post Image"
+          class="featured-image"
+        />
+        <div class="post-content">
+          <h2>Heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet nulla adipiscing elit. Nunc maximus, nec
+            ut commodo...
+          </p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+        <hr />
+        <div class="post-meta">
+          <span><i class="fa fa-calendar"></i> 15 Feb 2024</span>
+          <span><i class="fa fa-folder"></i> Category</span>
+          <span><i class="fa fa-user"></i> Adam Smith</span>
+        </div>
+      </div>
+      <div class="sidebar-posts">
+        <div class="single-post">
+          <img src="assets/image/thumbnail.png" alt="Thumbnail" />
+          <div class="single-post-content">
+            <h3>Heading</h3>
+            <p>
+              Lorem ipsum dolor sit amet nulla adipiscing elit. Lorem ipsum
+              dolor sit amet nulla
+            </p>
+            <div class="single-post-meta">
+              <i class="fa fa-calendar"></i> 20 Jan 2024
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="single-post">
+          <img src="assets/image/thumbnail.png" alt="Thumbnail" />
+          <div class="single-post-content">
+            <h3>Heading</h3>
+            <p>
+              Lorem ipsum dolor sit amet nulla adipiscing elit. Lorem ipsum
+              dolor sit amet nulla
+            </p>
+            <div class="single-post-meta">
+              <i class="fa fa-calendar"></i> 10 Jan 2024
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="single-post">
+          <img src="assets/image/thumbnail.png" alt="Thumbnail" />
+          <div class="single-post-content">
+            <h3>Heading</h3>
+            <p>
+              Lorem ipsum dolor sit amet nulla adipiscing elit. Lorem ipsum
+              dolor sit amet nulla
+            </p>
+            <div class="single-post-meta">
+              <i class="fa fa-calendar"></i> 18 Jan 2024
+              <i class="fa fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
