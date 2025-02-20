@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootcamp 2025 - Responsive Web Design</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .top-header {
+        text-align: center;
+        padding: 0px 10px;
+      }
+
+      .top-header h1 {
+        font-size: 30px;
+        margin: 20px 0px;
+      }
+
+      .container {
+        margin: 0 auto;
+        max-width: 600px;
+      }
+
+      .search-container input[type="search"] {
+        padding: 10px;
+        border-radius: 20px;
+        width: 261px;
+        border: 1px solid #ddd;
+      }
+
+      .post-content {
+        display: flex;
+
+        gap: 10px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin: 30px auto;
+      }
+
+      .post-thumbnail {
+        width: 50%;
+      }
+
+      .post-info {
+        width: 50%;
+        padding: 10px 0px;
+      }
+
+      .post-meta .fa {
+        padding-right: 2px;
+      }
+
+      .post-info h2 {
+        font-size: 24px;
+        margin: 10px 0;
+      }
+
+      .post-meta span {
+        margin: 0px 3px 0px 0px;
+        font-size: 10px;
+      }
+
+      .post-thumbnail img {
+        border-radius: 10px 0 0 10px;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .post-wrapper {
+        margin: 5px;
+      }
+
+      .dektop-post-wrapper {
+        display: none;
+      }
+
+      .single-post-meta {
+        display: none;
+      }
+
+      @media screen and (min-width: 768px) {
+        .post-wrapper {
+          display: flex;
+          gap: 10px;
+          margin: 10px;
+        }
+
+        .post-thumbnail img {
+          border-radius: 10px;
+        }
+
+        .post-meta span {
+          margin: 0px 5px 0px 0px;
+          font-size: 14px;
+        }
+
+        .post-content {
+          flex-direction: column;
+        }
+
+        .post-thumbnail {
+          width: 100%;
+        }
+
+        .post-info {
+          width: 100%;
+          padding: 10px 0px;
+        }
+
+        .container {
+          margin: 0 auto;
+          max-width: 1024px;
+        }
+
+        .post-content {
+          border: none;
+        }
+
+        .post-info {
+          padding: 10px;
+          border: 1px solid #ddd;
+          width: 85%;
+          margin: 0 auto;
+          border-radius: 10px;
+          margin-top: -50px;
+          background-color: #fff;
+        }
+
+        .post-meta span:nth-child(3) {
+          display: none;
+        }
+
+        .post-meta i.fa.fa-folder {
+          display: none;
+        }
+
+        .post-meta span:nth-child(2) {
+          float: right;
+          background-color: #f1f5fc;
+          padding: 3px 20px;
+          border-radius: 5px;
+        }
+
+        .post-content hr {
+          display: none;
+        }
+      }
+
+      @media screen and (min-width: 1025px) {
+        .dektop-post-wrapper {
+          display: block;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+        }
+
+        .main-post-wrapper {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          margin: 40px auto;
+        }
+
+        .featured-image {
+          border-radius: 10px 10px 0 0;
+        }
+
+        .post-content {
+          flex-direction: row;
+        }
+
+        .post-wrapper {
+          display: block;
+          margin: 0;
+        }
+
+        .post-content {
+          border: 1px solid #ddd;
+          gap: 0;
+          margin: 0 0 20px 0px;
+        }
+
+        .post-meta {
+          display: none;
+        }
+
+        .post-content:nth-child(3) {
+          margin: 0;
+        }
+
+        .post-info hr {
+          display: none;
+        }
+
+        .post-thumbnail {
+          width: auto;
+        }
+
+        .post-info {
+          width: auto;
+          margin-top: 0;
+          border: none;
+        }
+
+        .post-thumbnail img {
+          border-radius: 10px 0 0 10px;
+        }
+
+        .main-post-content,
+        .post-meta-big {
+          padding: 10px;
+        }
+
+        .post-meta-big span {
+          margin: 0 10px 0 0;
+        }
+
+        .read-more {
+          display: none;
+        }
+
+        .right-arrow {
+          float: right;
+        }
+
+        .single-post-meta {
+          display: block;
+        }
+
+        .search-container input[type="search"] {
+          width: 360px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="top-header">
+        <h1>Blog Title</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry
+        </p>
+        <div class="search-container">
+          <input type="search" placeholder="search.." />
+        </div>
+      </div>
+      <div class="main-post-wrapper">
+        <div class="dektop-post-wrapper">
+          <div class="featured-post">
+            <img
+              src="assets/image/mainblog.png"
+              alt="Post Image"
+              class="featured-image"
+            />
+            <div class="main-post-content">
+              <h2>Heading</h2>
+              <p>
+                Lorem ipsum dolor sit amet nulla adipiscing elit. Nunc maximus,
+                nec ut commodo...
+              </p>
+              <a href="#" class="read-more">Read more →</a>
+            </div>
+            <hr />
+            <div class="post-meta-big">
+              <span><i class="fa fa-calendar"></i> 15 Feb 2024</span>
+              <span><i class="fa fa-folder"></i> Category</span>
+              <span><i class="fa fa-user"></i> Adam Smith</span>
+            </div>
+          </div>
+        </div>
+        <div class="post-wrapper">
+          <div class="post-content">
+            <div class="post-thumbnail">
+              <img src="assets/image/dummy-1.jpg" alt="Thumbnail" />
+            </div>
+            <div class="post-info">
+              <div class="post-meta">
+                <span><i class="fa fa-calendar"></i> 15 Feb 2024</span>
+                <span><i class="fa fa-folder"></i> Category</span>
+                <span><i class="fa fa-user"></i> Adam Smith</span>
+              </div>
+              <hr />
+              <h2>Heading</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Nunc
+                maximus, nec ut commodo...
+              </p>
+              <a href="#" class="read-more">Read more →</a>
+              <div class="single-post-meta">
+                <span><i class="fa fa-calendar"></i> 15 Feb 2024</span>
+                <span class="right-arrow"
+                  ><i class="fa fa-arrow-right"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="post-content">
+            <div class="post-thumbnail">
+              <img src="assets/image/dummy-1.jpg" alt="Thumbnail" />
+            </div>
+            <div class="post-info">
+              <div class="post-meta">
+                <span><i class="fa fa-calendar"></i> 5 Feb 2024</span>
+                <span><i class="fa fa-folder"></i> Category</span>
+                <span><i class="fa fa-user"></i> Adam Smith</span>
+              </div>
+              <hr />
+              <h2>Heading</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Nunc
+                maximus, nec ut commodo...
+              </p>
+              <a href="#" class="read-more">Read more →</a>
+              <div class="single-post-meta">
+                <span><i class="fa fa-calendar"></i> 5 Feb 2024</span>
+                <span class="right-arrow"
+                  ><i class="fa fa-arrow-right"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="post-content">
+            <div class="post-thumbnail">
+              <img src="assets/image/dummy-1.jpg" alt="Thumbnail" />
+            </div>
+            <div class="post-info">
+              <div class="post-meta">
+                <span><i class="fa fa-calendar"></i> 8 jan 2024</span>
+                <span><i class="fa fa-folder"></i> Category</span>
+                <span><i class="fa fa-user"></i> Adam Smith</span>
+              </div>
+              <hr />
+              <h2>Heading</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Nunc
+                maximus, nec ut commodo...
+              </p>
+              <a href="#" class="read-more">Read more →</a>
+              <div class="single-post-meta">
+                <span><i class="fa fa-calendar"></i> 8 Jan 2024</span>
+                <span class="right-arrow"
+                  ><i class="fa fa-arrow-right"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

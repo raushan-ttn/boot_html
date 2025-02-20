@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bug Report</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+      }
+
+      .main-bug-form {
+        background: white;
+        border-radius: 8px;
+        width: 460px;
+        margin: 20px auto;
+        border: 1px solid #ddd;
+      }
+
+      h2 {
+        background: #bcc3ca;
+        padding: 10px 20px;
+        border-radius: 4px 4px 0 0;
+        margin: 0;
+        color: #fff;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 2% 0%;
+        margin-top: 5px;
+        border: 1px solid #bcc3ca;
+        border-radius: 4px;
+      }
+
+      select {
+        background-color: #1abc9c;
+        color: #fff;
+      }
+
+      .bug-form {
+        padding: 20px;
+      }
+
+      .radio-group {
+        display: flex;
+        gap: 10px;
+        margin-top: 5px;
+        justify-content: space-between;
+      }
+
+      .licence-item {
+        display: flex;
+      }
+
+      input#attachment {
+        padding: 0;
+      }
+      .submit-btn {
+        background: #1abc9c;
+        color: white;
+        padding: 10px;
+        border: none;
+        width: 100px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .submit-btn-box {
+        background-color: #edeff1;
+        padding: 20px;
+        text-align: right;
+        border-top: 1px solid #bcc3ca;
+      }
+
+      #attachment::file-selector-button {
+        float: right;
+        background-color: #ddd;
+        cursor: pointer;
+        padding: 2% 0%;
+        border: none;
+        margin-right: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-bug-form">
+      <h2>Bug Report</h2>
+      <form action="#" method="POST">
+        <div class="bug-form">
+          <label for="title">Title: *</label>
+          <input type="text" id="title" name="title" required />
+
+          <label for="description">Description: *</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            required
+          ></textarea>
+
+          <label for="os">Operating System:</label>
+          <select id="os" name="os">
+            <option>Windows XP</option>
+            <option>Windows 10</option>
+            <option>MacOS</option>
+            <option>Linux</option>
+          </select>
+
+          <label for="product">Product: *</label>
+          <select id="product" name="product" required>
+            <option>Formoid</option>
+            <option>Other</option>
+          </select>
+
+          <label for="version">Version: *</label>
+          <input type="text" id="version" name="version" required />
+
+          <label>License:</label>
+          <div class="radio-group">
+            <div class="licence-item">
+              <input type="radio" id="free" name="license" value="free" />
+              <label for="free">Free</label>
+            </div>
+            <div class="licence-item">
+              <input
+                type="radio"
+                id="business"
+                name="license"
+                value="business"
+              />
+              <label for="business">Business</label>
+            </div>
+          </div>
+
+          <label for="severity">Severity:</label>
+          <select id="severity" name="severity">
+            <option>Critical</option>
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+          </select>
+
+          <label for="attachment">Attachments:</label>
+          <input type="file" id="attachment" name="attachment" />
+        </div>
+        <div class="submit-btn-box">
+          <button type="submit" class="submit-btn">Send</button>
+        </div>
+      </form>
+    </div>
+    <!--     <script type="text/javascript">
+        function updateFileName() {
+            const input = document.getElementById('attachment');
+            const fileName = input.files.length > 0 ? input.files[0].name : "No file selected";
+            document.querySelector(".file-name").textContent = fileName;
+        }
+    </script> -->
+  </body>
+</html>
