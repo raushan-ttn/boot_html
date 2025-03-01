@@ -106,11 +106,3 @@ const sum1 = (...args) => {
 };
 
 sum1(1, 2, 3, 4, 5);
-
-// 4. Default Values
-// 5. Rest Operator
-// 6. Destructuring in function arguments
-// 7. Swapping variables
-// 8. Ignoring values
-// 9. Destructuring in loops
-// 10. Destructuring in function arguments
